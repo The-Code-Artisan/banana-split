@@ -10,4 +10,4 @@ COPY *.go ./
 
 RUN CGO_ENABLED=0 GOOS=linux go build -o /banana-split-server
 
-CMD["/banana-split-server"]
+CMD ["/banana-split-server"]
