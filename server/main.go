@@ -12,5 +12,7 @@ func main() {
 		fmt.Fprintf(writer, "Ping")
 	})
 
+	fmt.Printf("Listening on 8001")
+
 	log.Fatal(http.ListenAndServe(":8001", nil))
 }
