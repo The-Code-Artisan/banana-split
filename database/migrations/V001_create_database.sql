@@ -17,3 +17,4 @@ CREATE TABLE IF NOT EXISTS balances(
     lender_id INT REFERENCES users(user_id),
     borrower INT REFERENCES users(user_id)
 );
+ 
