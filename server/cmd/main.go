@@ -15,7 +15,10 @@ func main() {
 		Handler: router,
 	}
 	log.Println("Starting server on port :8001")
-	server.ListenAndServe()
+	err := server.ListenAndServe()
+	if err != nil {
+		log.Panicf("Unable to start server. Err: %v", err)
+	}
 }
 
 func ping(w http.ResponseWriter, req *http.Request) {
