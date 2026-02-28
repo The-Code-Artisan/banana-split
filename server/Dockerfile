@@ -8,8 +8,8 @@ RUN go mod download
 
 COPY *.go ./
 
-RUN CGO_ENABLED=0 GOOS=linux go build -o ./bin/api ./cmd/api
+RUN CGO_ENABLED=0 GOOS=linux go build -o ./bin/banana ./cmd/
 
 EXPOSE 8001
 
-CMD ["/app/bin/api"]
+CMD ["/app/bin/banana"]
