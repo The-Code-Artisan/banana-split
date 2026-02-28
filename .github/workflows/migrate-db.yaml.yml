@@ -19,3 +19,4 @@ jobs:
           username: ${{ secrets.PG_USER }}
           password: ${{ secrets.PG_PWD }}
           db: ${{ secrets.PG_DB }}
+          ssl: false
