@@ -8,8 +8,10 @@ RUN go mod download
 
 COPY *.go ./
 
-RUN CGO_ENABLED=0 GOOS=linux go build -o /banana-split-server
+RUN CGO_ENABLED=0 GOOS=linux go build -o ./bin/api ./cmd/api
+
+RUN CGO_ENABLED=0 GOOS=linux go build -o ./bin/migrate ./cmd/migrate
 
 EXPOSE 8001
 
-CMD ["/banana-split-server"]
+CMD ["/app/bin/api"]

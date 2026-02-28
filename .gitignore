@@ -149,3 +149,6 @@ google-services.json
 # Android Profiling
 *.hprof
 
+# Custom folders
+tmp/
+
