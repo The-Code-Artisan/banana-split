@@ -1,1 +1,0 @@
-FROM sqitch/sqitch@latest
