@@ -8,6 +8,9 @@ jobs:
   migrate:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Apply PostgreSQL migrations
         uses: yakubique/postgresql-apply-migrations@v1.1
         with:
