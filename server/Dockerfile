@@ -6,9 +6,9 @@ COPY go.mod ./
 
 RUN go mod download
 
-COPY *.* ./
+COPY . ./
 
-RUN CGO_ENABLED=0 GOOS=linux go build -o ./bin/banana ./server/cmd/
+RUN CGO_ENABLED=0 GOOS=linux go build -o ./bin/banana ./cmd
 
 EXPOSE 8001
 
